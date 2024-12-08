@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.thymeleaf.org" th:replace="base::layout(~{::div})">
+<head>
+    <title>Admin Login</title>
+    <style>
+        /* Set background for the entire page */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('/img/background.jpg') no-repeat center center fixed;
+            background-size: cover; /* Make the background cover the whole page */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center the card vertically and horizontally */
+        .container-fluid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .admin {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .btn.custom-bg {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn.custom-bg:hover {
+            background-color: #0056b3;
+        }
+
+        small.text-muted {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row mt-2">
+        <div class="col-md-4 offset-md-4 admin">
+            <div class="card">
+                <!-- Status message (if available) -->
+                <div th:if="${status}" class="alert alert-info" role="alert">
+                    <strong th:text="${status}"></strong>
+                </div>
+
+                <div class="card-body px-5">
+                    <h3 class="text-center my-3">Admin Login</h3>
+
+                    <form th:action="@{/adminlogin}" method="post">
+                        <div class="form-group">
+                            <label for="userId">User Id</label>
+                            <input type="text" class="form-control"
+                                   id="userId" name="userId" placeholder="Enter user id.."
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password"
+                                   class="form-control" id="password" name="password"
+                                   placeholder="Enter password.." required>
+                            <small id="passwordHelpInline" class="text-muted">
+                                Must be 8-20 characters long.
+                            </small>
+                        </div>
+
+                        <div class="container text-center">
+                            <button class="btn custom-bg text-color">
+                                <button class="login-btn">Login</button>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

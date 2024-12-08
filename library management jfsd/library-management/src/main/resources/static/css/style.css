@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url('/img/library%20login.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire page */
+    color: #ffffff; /* Set default font color to white */
+    overflow-x: hidden;
+}
+
+/* Page Background Colors */
+.custom-page-bg {
+    background: none; /* Remove any additional background */
+    color: #ffffff; /* White text color */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Custom Background */
+.custom-bg {
+    background: none; /* Remove any additional background */
+    color: #ffffff; /* White text color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Color in Workspace */
+.text-color {
+    color: #ffffff !important; /* Set text color to white in workspace */
+}
+
+/* Navbar Styling (Unchanged) */
+.navbar {
+    background: linear-gradient(90deg, #fcde67, #fcb045); /* Yellow-gold gradient */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+.navbar .nav-link {
+    color: black !important; /* Keep navbar text black */
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ff5722 !important;
+    text-shadow: 0 0 8px #ff5722;
+}
+
+.navbar-toggler {
+    background-color: white;
+    border: none;
+}
+
+.navbar-brand {
+    color: black !important; /* Keep navbar brand text black */
+    font-weight: bold;
+    font-size: 20px;
+    transition: text-shadow 0.3s ease;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 10px #ff5722;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+/* Feature Box Styling */
+.feature-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white background */
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* White text color in workspace */
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly darker transparent white */
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box h4 {
+    font-size: 1.8rem;
+    color: #ffffff; /* White text color in workspace */
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #ffffff; /* White text color in workspace */
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(90deg, #fcb045, #fcde67);
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+/* Modal Styling */
+.modal-size {
+    max-width: 80% !important;
+}
+
+.bcontent {
+    margin-top: 10px;
+}
+/* Login Button Styling */
+button.login-btn {
+    background-color: #fcde67; /* Yellow color */
+    color: white; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.login-btn:hover {
+    background-color: #fcb045; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+button.login-btn:focus {
+    outline: none; /* Remove outline on focus */
+}
